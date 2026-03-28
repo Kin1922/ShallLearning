@@ -1,0 +1,161 @@
+:root { 
+    --neon-blue: #00f3ff; 
+    --neon-pink: #ff00ea; 
+    --bg-dark: #050505; 
+    --text-white: #ffffff; 
+}
+
+body { 
+    font-family: 'Courier New', Courier, monospace; 
+    background-color: var(--bg-dark); 
+    color: var(--text-white); 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+    min-height: 100vh; 
+    overflow-y: auto; 
+    padding: 40px 0; 
+}
+
+/* Scrollbar Neon */
+body::-webkit-scrollbar { width: 8px; }
+body::-webkit-scrollbar-track { background: var(--bg-dark); }
+body::-webkit-scrollbar-thumb { background: var(--neon-blue); border-radius: 10px; box-shadow: 0 0 10px var(--neon-blue); }
+
+.container { 
+    width: 90%; 
+    max-width: 650px; 
+    position: relative; 
+    z-index: 1;
+    margin: auto; 
+}
+
+.step { 
+    display: none; 
+    background: rgba(10, 10, 10, 0.95); 
+    padding: 45px; 
+    border-radius: 15px; 
+    border: 2px solid var(--neon-blue); 
+    box-shadow: 0 0 20px var(--neon-blue), inset 0 0 15px rgba(0, 243, 255, 0.2);
+    animation: flicker 0.3s infinite alternate; 
+}
+
+.step.active { display: block; animation: fadeIn 0.8s ease-in-out; }
+
+h1 { font-size: 2rem; color: var(--neon-blue); margin-top: 0; text-transform: uppercase; letter-spacing: 2px; text-shadow: 0 0 10px var(--neon-blue); }
+p { line-height: 1.8; font-size: 1.1rem; color: #cbd5e1; text-align: left; }
+
+#step0 p { text-align: center; }
+
+.btn-container { 
+    margin-top: 40px; 
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 15px; 
+    flex-wrap: wrap; 
+}
+
+/* Layout untuk tombol bulat di tengah */
+.welcome-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px; /* Space untuk spinner */
+    margin-top: 20px;
+}
+
+.btn { 
+    background: transparent; 
+    color: var(--neon-pink); 
+    border: 2px solid var(--neon-pink); 
+    padding: 12px 25px; 
+    border-radius: 4px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    text-transform: uppercase;
+    box-shadow: 0 0 8px var(--neon-pink);
+    transition: 0.3s all ease;
+    font-family: inherit;
+}
+
+/* KHUSUS TOMBOL BULAT DI DEPAN */
+.btn-round {
+    width: 120px;
+    height: 120px;
+    border-radius: 50% !important;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    z-index: 2;
+    position: relative;
+}
+
+.btn:hover { 
+    background: var(--neon-pink); 
+    color: #000; 
+    box-shadow: 0 0 25px var(--neon-pink);
+    transform: scale(1.05);
+}
+
+.btn-back { border-color: #475569; color: #475569; box-shadow: none; }
+
+/* ANIMASI SPINNER */
+.spinner-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    position: absolute;
+    width: 170px; /* Lebih besar dari tombol */
+    height: 170px;
+    border: 3px solid transparent;
+    border-top: 3px solid var(--neon-blue);
+    border-bottom: 3px solid var(--neon-blue);
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+    box-shadow: 0 0 15px var(--neon-blue);
+    z-index: 1;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+footer {
+    width: 100%;
+    margin-top: 60px;
+    font-size: 0.85rem;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-bottom: 30px;
+    text-align: center; 
+}
+
+.footer-name {
+    color: var(--neon-pink); 
+    text-shadow: 0 0 10px var(--neon-pink);
+    font-weight: bold;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+@keyframes flicker { 0% { opacity: 0.97; } 100% { opacity: 1; } }
+
+.progress-bar { position: absolute; top: -30px; width: 100%; height: 4px; background: #1e293b; border-radius: 10px; }
+.progress { height: 100%; background: var(--neon-pink); width: 20%; transition: 0.6s; box-shadow: 0 0 15px var(--neon-pink); border-radius: 10px; }
+
+.highlight { color: var(--neon-blue); font-weight: bold; }
+
+@media (max-width: 480px) {
+    .step { padding: 25px; }
+    h1 { font-size: 1.5rem; }
+    .btn:not(.btn-round) { width: 100%; text-align: center; }
+}

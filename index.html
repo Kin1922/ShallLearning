@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell Log | Final Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="progress-bar"><div class="progress" id="progress"></div></div>
+
+    <div class="step active" id="step0">
+        <h1 style="text-align: center;">[ ACCESSING LOGS ]</h1>
+        <p>Inisialisasi sistem perpisahan Faishal.</p>
+        <div class="welcome-btn-container">
+            <div class="spinner-container">
+                <div class="spinner"></div>
+                <button class="btn btn-round" onclick="nextStep(1)">START 🚀</button>
+            </div>
+        </div>
+        <p style="font-size: 0.8rem; color: #475569;">Authorized Personnel Only</p>
+    </div>
+
+    <div class="step" id="step1">
+        <h1>[ SYSTEM INITIALIZING ]</h1>
+        <p>Selamat Pagi✊, rekan-rekan hebat! Sepertinya masa aktif Faishal di PT Marunda Distribusindo Raya ini sudah mencapai batas limitnya.</p>
+        <p>Faishal sengaja bikin halaman ini sebagai bentuk <span class="highlight">effort terakhir</span> buat Teman-teman. Karena buat Faishal, perpisahan lewat chat biasa itu terlalu singkat buat semua momen yang udah kita lewati bareng.</p>
+        <div class="btn-container">
+            <button class="btn btn-back" onclick="nextStep(0)">Back</button>
+            <button class="btn" onclick="nextStep(2)">Lanjut Teman-Teman 🚀</button>
+        </div>
+    </div>
+
+    <div class="step" id="step2">
+        <h1>[ CORE MEMORIES ]</h1>
+        <p>Faishal inget banget awal masuk sini, masih bingung sistem dan cara kerja di sini, tapi kalian dengan sabar ngebantu dan mengajari Faishal sampai akhirnya kita bisa solid banget kayak sekarang.</p>
+        <p>Terima kasih buat setiap <span class="highlight">brainstorming</span> yang panas tapi asik, nongkorng depan pt ngobrol,bercanda,makan mendoan,dan saling kasih saran dan kritik, dan buat kekompakan tim yang selalu bisa nyelesein masalah serumit apa pun. Kalian adalah aset terbaik yang pernah Faishal temui.</p>
+        <div class="btn-container">
+            <button class="btn btn-back" onclick="nextStep(1)">Back</button>
+            <button class="btn" onclick="nextStep(3)">Klik Sini Hehe✌</button>
+        </div>
+    </div>
+
+    <div class="step" id="step3">
+        <h1>[ HUMAN ERROR ]</h1>
+        <p>Selama kita kerja bareng, Faishal sadar pasti ada <span class="highlight">"Kesalahan"</span> dalam sikap atau kata-kata Faishal yang mungkin kurang berkenan. Maafin Faishal ya kalau pernah bikin emosi, repot atau ada salah yang disengaja maupun nggak.</p>
+        <p>Faishal pergi membawa banyak pelajaran berharga dari kalian. Kerja keras dan Pengalamman kalian selalu jadi inspirasi buat Faishal ke depannya. <span class="highlight">Communication is Key</span>, jadi jangan sampe kita beneran putus kontak ya!</p>
+        <div class="btn-container">
+            <button class="btn btn-back" onclick="nextStep(2)">Back</button>
+            <button class="btn" onclick="nextStep(4)">Yang Terakhir 🌱</button>
+        </div>
+    </div>
+
+    <div class="step" id="step4">
+        <h1>[ CONNECTION ENDED ]</h1>
+        <p>Hari ini Faishal resmi <span class="highlight">disconnect</span> dari tugas harian, tapi Faishal harap persahabatan kita tetep sinkron di luar sana.</p>
+        <p>Sukses terus buat Teman-teman Sales Dan KSR Faishal, jangan lupa istirahat, dan sampai ketemu di level selanjutnya! Cheers to the best team ever! 🍻</p>
+        <div class="btn-container">
+            <button class="btn btn-back" onclick="nextStep(3)">Back</button>
+            <button class="btn" onclick="location.href='https://wa.me/6283817520131'">Test Hi di WhatsApp</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    End of Chapter. Dibuat Oleh <span class="footer-name">Faishal Pake H</span> | Juli 2026
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
