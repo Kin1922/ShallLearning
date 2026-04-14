@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faishal Pake H  Final Access</title>
+    <title>Faishal Pake H | Final Access</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<audio id="bgMusic" loop>
+    <source src="semua-tentang-kita.mp3" type="audio/mpeg">
+</audio>
 
 <div class="container">
     <div class="progress-bar"><div class="progress" id="progress"></div></div>
@@ -20,7 +24,7 @@
                 <button class="btn btn-round" onclick="nextStep(1)">START 🚀</button>
             </div>
         </div>
-        <p style="font-size: 0.8rem; color: #475569;"> Hi Gwe Faishal Pake H</p>
+        <p style="font-size: 0.8rem; color: #475569;">Authorized Personnel Only</p>
     </div>
 
     <div class="step" id="step1">
@@ -49,17 +53,69 @@
         <p>Faishal pergi membawa banyak pelajaran berharga dari kalian. Kerja keras dan Pengalamman kalian selalu jadi inspirasi buat Faishal ke depannya. <span class="highlight">Communication is Key</span>, jadi jangan sampe kita beneran putus kontak ya!</p>
         <div class="btn-container">
             <button class="btn btn-back" onclick="nextStep(2)">Back</button>
-            <button class="btn" onclick="nextStep(4)">Yang Terakhir 🌱</button>
+            <button class="btn" onclick="nextStep(4)">Lihat Foto 📸</button>
         </div>
     </div>
 
     <div class="step" id="step4">
+        <h1>[ VISUAL LOGS ]</h1>
+        <p>Sedikit dokumentasi dari sekian banyak momen kebersamaan kita. <span class="highlight">Memories cached successfully.</span></p>
+        
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="foto1.jpg" alt="Foto 1" class="gallery-img">
+                <div class="gallery-desc">Momen ngopi sore sambil bahas target bulanan.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="foto2.jpg" alt="Foto 2" class="gallery-img">
+                <div class="gallery-desc">Makan mendoan depan PT, the best banget!</div>
+            </div>
+            <div class="gallery-item">
+                <img src="foto3.jpg" alt="Foto 3" class="gallery-img">
+                <div class="gallery-desc">Pusing ngadepin revisi, tapi tetep senyum.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="foto4.jpg" alt="Foto 4" class="gallery-img">
+                <div class="gallery-desc">Kekompakan tim KSR & Sales yang gak ada matinya.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="foto5.jpg" alt="Foto 5" class="gallery-img">
+                <div class="gallery-desc">Event kantor yang paling pecah tahun lalu.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="foto6.jpg" alt="Foto 6" class="gallery-img">
+                <div class="gallery-desc">Candid pas lagi pada serius ngerjain laporan.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="foto7.jpg" alt="Foto 7" class="gallery-img">
+                <div class="gallery-desc">Momen random bercandaan di parkiran.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="foto8.jpg" alt="Foto 8" class="gallery-img">
+                <div class="gallery-desc">Briefing pagi sebelum tempur ke lapangan.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="foto9.jpg" alt="Foto 9" class="gallery-img">
+                <div class="gallery-desc">Selfie andalan tim paling solid.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="foto10.jpg" alt="Foto 10" class="gallery-img">
+                <div class="gallery-desc">Makasih buat semuanya. You guys rock!</div>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button class="btn btn-back" onclick="nextStep(3)">Back</button>
+            <button class="btn" onclick="nextStep(5)">Yang Terakhir 🌱</button>
+        </div>
+    </div>
+    <div class="step" id="step5">
         <h1>[ CONNECTION ENDED ]</h1>
         <p>Hari ini Faishal resmi <span class="highlight">disconnect</span> dari tugas harian, tapi Faishal harap persahabatan kita tetep sinkron di luar sana.</p>
         <p>Sukses terus buat Teman-teman Sales Dan KSR Faishal, jangan lupa istirahat, dan sampai ketemu di level selanjutnya! Cheers to the best team ever! 🍻</p>
         <div class="btn-container">
-            <button class="btn btn-back" onclick="nextStep(3)">Back</button>
-            <button class="btn" onclick="location.href='https://wa.me/6283817520131'">Chat Klo Perlu Aja</button>
+            <button class="btn btn-back" onclick="nextStep(4)">Back</button>
+            <button class="btn" onclick="location.href='https://wa.me/6283817520131'">Test Hi di WhatsApp</button>
         </div>
     </div>
 </div>
@@ -69,6 +125,5 @@
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
